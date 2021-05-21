@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(120deg, #000000, #ffffff);
+    min-height: 100vh;
+}
+
+.heading {
+    color: #ffee00;
+    text-align: center;
+}
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next,
+.carousel-item-previous,
+.carousel-item.active {
+    transition: transform 1.2s ease;
+}
+
+.carousel-indicators li {
+    width: 40 px;
+    height: 6px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+}
+
+
+/*-- Carousel Content --*/
+
+.carousel-caption {
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 70%
+}
+
+.bg-dark {
+    background-color: rgba(0, 0, 0, .8) !important;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.carousel-caption {
+    font-size: 2.3rem;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.lead {
+    font-size: 1.4rem;
+}
+
+.form {
+    background-color: rgb(24, 19, 19);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.fav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: tomato;
+}
+
+.btn-block {
+    margin-top: 50px;
+}
+
+.predictions {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    background-color: black;
+    color: turquoise
+}
+
+#first_name {
+    width: 300px;
+    border-radius: 10px;
+}
+
+footer {
+    background-image: linear-gradient(120deg, #000000, #573fc5);
+    padding: 1rem 2rem 3rem;
+    border-radius: 50px;
+}
+
+footer a:hover,
+.socket a:hover {
+    color: tomato;
+    text-decoration: none;
+}
+
+footer a,
+.socket a,
+.info {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/*============= SOCKET =============*/
+.socket {
+    background-color: #222222;
+    border-top: .1rem solid gray;
+    width: 200px;
+}
+
+span {
+    color: white;
+}

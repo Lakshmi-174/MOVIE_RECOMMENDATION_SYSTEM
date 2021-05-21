@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie-Recommendation-System</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}"/>>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+        <h1 class="heading">MOVIE RECOMMENDATION ENGINE</h1>
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="650000">
+
+		<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="650000">
+                       <div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="static/images/1.jpeg" class="w-100" height="700px" width="400px" alt="">
+					<div class="carousel-caption">
+						<div class="container">
+							<div class="row justify-content-end">
+								<div class="d-none d-md-block col-11-md col-lg-9 col-xl-8 bg-dark text-right">
+									<div class="border-top border-white w-75 ml-auto"></div>
+									<p class="lead">Acorrding to IDMB dataset analysis,Top 5 movies on popularity</p>
+									<a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata" class="btn btn-primary btn-md mb-3">learn more..</a>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item ">
+					<img src="static/images/2.jpeg" class="w-100" height="700px" width="400px" alt="">
+                                        <div class="carousel-caption">
+						<div class="container">
+							<div class="row justify-content-end">
+								<div class="d-none d-md-block col-11-md col-lg-9 col-xl-8 bg-dark text-right">
+									<div class="border-top border-white w-75 ml-auto"></div>
+									<p class="lead">Acorrding to IDMB dataset analysis,Top 5 movies on high budget</p>
+									<a href="https://www.kaggle.com/tmdb/tmdb-movie-metadata" class="btn btn-primary btn-md mb-3">learn more..</a>
+
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- End Carousel Content -->
+
+			<!-- Carousel Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel" data-slide-to="1"></li>
+			</ol>
+
+			<!-- End Carousel Indicators -->
+
+		</div>
+	</div>
+        <br>	
+        <br>
+       <form action='/predict' method="post" class="form">
+               <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>HELLO USER!&#128522;</strong> Give your favourite movie i.e released in between years 2001 and 2017 and get recommendations based on genre , cast and crew.!!!
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                        </button>
+                </div>
+                <div class="row">
+                        <div class="col">
+                                <label class="fav" for="first_name"><b>Enter your Favourite movie</b></label>
+                        </div>
+                
+                        <div class="col">
+                                <input placeholder="movie name" name="Temperature" id="first_name" type="text" class="validate">
+                        </div>
+                </div>
+                <div class="row">
+
+                </div>
+                <div class="row">
+                        <div class="col-12">
+                                <button type="submit" class="btn btn-success btn-lg btn-block">Recommendations</button>
+                        </div>
+                      
+                </div>
+        
+        </form>
+       <br>
+       <div class="predictions">
+                {{pred}}
+       </div>
+       <br>
+</div>
+	<!-- Start Footer -->
+	<footer class="container">
+		<div class="container">
+			<div class="row justify-content-center text-center text-light">
+				<div class="col-md-9">
+					<a href=""><i class="fas fa-smile-beam fa-3x"></i></a>
+					<p class="info">thanks for the view&#10024;</p>
+				</div>
+				<div class="col-md-4">
+					<hr class="bg-danger">
+					<h5 class= "info">contact info</h5>
+					<hr class="bg-danger">
+					<p><a href="tel:+4444444444">555-55-555-5555</a></p>
+					<p><a href="mailto:+thullurinaga@karunya.edu.in">thullurinaga@karunya.edu.in</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- End Footer -->
+
+
+	<!-- Start Socket -->
+	<!-- <div class="container">
+	<div class="socket text-light text-center py-4">
+		<p><span>&copy;</span><a href="emailto:+luckyashley@gmail.com">let's-connect</a></p>
+	</div>
+    </div> -->
+
+	<!-- End Socket -->
+
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<!--<script src=".js/materialize.js"></script>-->
+<!--<script src="js/init.js"></script>-->
+</body>
+</html>
